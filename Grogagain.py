@@ -34,4 +34,6 @@ def handle_get():
         return jsonify({"error": "Prompt parameter missing"}), 400
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    import random
+    port = random.randint(5000, 8080)
+    app.run(debug=True, port=port)
